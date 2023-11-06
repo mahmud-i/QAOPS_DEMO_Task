@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Page</title>
+</head>
+<body>
+    <h1>Welcome to the Greeting Page</h1>
+    <form id="greeting-form">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+    <h2 id="greeting-message">
+    <script>
+        document.getElementById("greeting-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById("name");
+            const greetingMessage = document.getElementById("greeting-message");
+            const name = nameInput.value;
+            greetingMessage.textContent = `Hello, ${name}!`;
+        });
+    </script></h2>
+</body>
+</html>
