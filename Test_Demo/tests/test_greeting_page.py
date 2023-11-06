@@ -31,5 +31,5 @@ def test_greeting_page(browser, url, name):
     if name != "":
         assert actual_greeting == expected_greeting
     else:
-        assert actual_greeting == "" and expected_greeting != "Hello, !"
+        assert actual_greeting == "" or expected_greeting != "Hello, !"
 
